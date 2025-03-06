@@ -1,13 +1,8 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Image Downloader</title>
-</head>
 <body>
 
-    <div id="loading">Loading...</div>
+    <button id="download-images-button">Download Images</button>
+    
+    <div id="loading" style="display: none;">Loading...</div>
     <div id="error" style="color: red;"></div>
     <div id="output"></div>
 
@@ -67,9 +62,8 @@
                 });
         }
 
-        // Start downloading images
-        downloadImages();
+        // Attach event listener to the button
+        document.getElementById("download-images-button").addEventListener("click", downloadImages);
     </script>
 
 </body>
-</html>
